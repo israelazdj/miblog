@@ -1,0 +1,51 @@
+@url = http://localhost:3000/api
+
+//obtener todos los posts
+Get {{url}}/posts
+
+//recuperar solo posts by id
+###
+Get {{url}}/posts/12
+
+
+//creación y recuperación de un posts
+###
+POST {{url}}/posts
+Content-Type: application/json
+
+{
+    "titulo": "Introduccion a sql",
+    "descripcion": "'Este post cubre los fundamentos'",
+    "fecha_creacion": "2024-11-08",
+    "categoria": "lenguaje de programacion",
+    "autor_id": 4
+}
+
+########################
+### autores y suspost ##
+########################
+
+//recuperar todos los autores
+###
+Get {{url}}/autor
+
+//recuperar a un autor por id
+###
+Get {{url}}/autor/6
+
+
+//obtener posts de un autor
+###
+Get {{url}}/posts/autor/3
+
+
+//creación y recuperacion de nuevos autores
+###
+POST {{url}}/autor
+Content-Type: application/json
+
+{
+    "nombre": "jm",
+    "email": "jm@gmail.coma",    
+    "imagen": "'https://i.pravatar.cc/500?u=clemente.alonzomayorga@peticiones.online'"
+}
